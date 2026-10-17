@@ -44,9 +44,3 @@ The summary PDF currently leaves the model comparison and final accuracy to be c
 4. Impute missing values, one-hot encode categorical fields, and scale numeric fields in a scikit-learn pipeline.
 5. Compare Logistic Regression, Decision Tree, and Random Forest using accuracy, precision, recall, F1-score, and a confusion matrix.
 6. Record the measured model results and explain the project limitations.
-
-
-git push -u origin main
-```
-
-Replace the remote URL with the HTTPS URL shown on your GitHub repository page. If `origin` is already configured, skip `git remote add origin` and check it with `git remote -v`. Review `git status` before committing, and confirm the dataset license permits publishing the CSV files. If not, leave `data/raw/` out of the Git commit and explain in this README how to download the data.
