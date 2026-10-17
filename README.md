@@ -18,39 +18,23 @@ The dataset includes applicant demographics, income, requested loan amount, loan
 ```text
 .
 ├── data/
-│   └── raw/
 │       ├── train.csv
 │       └── test.csv
 ├── notebooks/
-│   ├── loan_approval_colab.ipynb       # Google Colab version; prompts you to upload both CSVs
-│   └── loan_approval_starter.ipynb     # Local Jupyter version; reads data/raw/
-├── output/
-│   └── pdf/
-│       └── loan_approval_project_summary.pdf
+│   ├── loan_default_prediciton.ipynb       # Google Colab version; prompts you to upload both CSVs
 ├── requirements.txt
 └── README.md
 ```
 
-The summary PDF currently leaves the model comparison and final accuracy to be completed after running the notebook. Do not report a score until it has been measured from the validation results.
+The summary PDF currently leaves the model comparison and final accuracy to be completed after running the notebook.
 
 ## Run in Google Colab
 
 1. Open [Google Colab](https://colab.research.google.com/).
 2. Upload `notebooks/loan_approval_colab.ipynb`.
 3. Run the cells from top to bottom.
-4. When prompted, upload both CSV files from `data/raw/`.
+4. When prompted, upload both CSV files from `data/`.
 5. Review the validation metrics and confusion matrix. The test CSV has no labels, so it cannot be used to calculate accuracy.
-
-## Run locally with Jupyter
-
-From the project root, install the dependencies and start Jupyter:
-
-```bash
-python -m pip install -r requirements.txt
-jupyter notebook
-```
-
-Then open `notebooks/loan_approval_starter.ipynb` and run the cells from top to bottom. Keep the `data/` folder alongside the notebook's project root so its relative file paths work.
 
 ## Workflow
 
@@ -61,16 +45,7 @@ Then open `notebooks/loan_approval_starter.ipynb` and run the cells from top to 
 5. Compare Logistic Regression, Decision Tree, and Random Forest using accuracy, precision, recall, F1-score, and a confusion matrix.
 6. Record the measured model results and explain the project limitations.
 
-## Push the project to GitHub
 
-Create an empty repository on GitHub first. Do not select the option to add a README if you want to push this existing README as the first commit. Then open PowerShell in this project folder and run:
-
-```powershell
-git add .gitignore README.md requirements.txt data/raw/train.csv data/raw/test.csv notebooks/loan_approval_colab.ipynb notebooks/loan_approval_starter.ipynb output/pdf/loan_approval_project_summary.pdf
-git status
-git commit -m "Add loan approval prediction project"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 git push -u origin main
 ```
 
